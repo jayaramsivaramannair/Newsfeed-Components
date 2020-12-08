@@ -153,10 +153,28 @@ function articleMaker({title, date, firstParagraph, secondParagraph, thirdParagr
   to create a div.article element and append it to the DOM inside div.articles (see index.html).
   */
 
-  const articlesContainer = document.querySelector("div.articles");
-  data.forEach((datum) => articlesContainer.appendChild(articleMaker(datum)));
 
   /*
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
   */
+
+ function newDataItem(title, date) {
+    let articleObject = new Object();
+    articleObject.title = title;
+    articleObject.date = date;
+    articleObject.firstParagraph = "I've rented a car in Las Vegas and have reserved a hotel in Twentynine Palms which is just north of Joshua Tree. We'll drive from Las Vegas through Mojave National Preserve and possibly do a short hike on our way down. Then spend all day on Monday at Joshua Tree. We can decide the next morning if we want to do more in Joshua Tree or Mojave before we head back.";
+    articleObject.secondParagraph = "Out of another, I get a lovely view of the bay and a little private wharf belonging to the estate. There is a beautiful shaded lane that runs down there from the house. I always fancy I see people walking in these numerous paths and arbors, but John has cautioned me not to give way to fancy in the least. He says that with my imaginative power and habit of story-making a nervous weakness like mine is sure to lead to all manner of excited fancies and that I ought to use my will and good sense to check the tendency. So I try.";
+    articleObject.thirdParagraph = "You can decide what you want to do in life, but I suggest doing something that creates. Something that leaves a tangible thing once you're done. That way even after you're gone, you will still live on in the things you created.";
+ 
+    return articleObject;
+ }
+
+ let article5 = data.push(newDataItem("Lambda raises another round of financing", "October 25th, 2018"));
+ let article6 = data.push(newDataItem("First student hired at FAANG Companies", "November 19th, 2020"));
+
+ const articlesContainer = document.querySelector("div.articles");
+ data.forEach((datum) => articlesContainer.appendChild(articleMaker(datum)));
+
+ 
+
