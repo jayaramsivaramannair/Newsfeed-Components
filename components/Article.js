@@ -172,6 +172,8 @@ function articleMaker({title, date, firstParagraph, secondParagraph, thirdParagr
 
  let article5 = data.push(newDataItem("Lambda raises another round of financing", "October 25th, 2018"));
  let article6 = data.push(newDataItem("First student hired at FAANG Companies", "November 19th, 2020"));
+ let article7 = data.push(newDataItem("Lambda School pioneers the Income Share Agreement Model", "November 16th, 2017"));
+ let article8 = data.push(newDataItem("Austen Allred, CEO of Lambda School Intends to break the existing Higher Education Model", "October 13th, 2019"));
 
  const articlesContainer = document.querySelector("div.articles");
  data.forEach((datum) => articlesContainer.appendChild(articleMaker(datum)));
