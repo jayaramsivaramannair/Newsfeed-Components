@@ -153,6 +153,9 @@ function articleMaker({title, date, firstParagraph, secondParagraph, thirdParagr
   to create a div.article element and append it to the DOM inside div.articles (see index.html).
   */
 
+  const articlesContainer = document.querySelector("div.articles");
+  data.forEach((datum) => articlesContainer.appendChild(articleMaker(datum)));
+
   /*
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
